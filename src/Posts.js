@@ -21,7 +21,7 @@ class Posts extends Component {
 
   render () {
     const { posts } = this.state;
-    if (posts.length === 0) return null;
+    if (posts.length === 0) return <p>Loading...</p>;
 
     const postsList = posts.map((post) => {
       return <li key={post.id}>{post.title}</li>;
